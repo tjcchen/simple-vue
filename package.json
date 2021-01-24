@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/tjcchen/simple-vue.git"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",

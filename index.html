@@ -14,14 +14,15 @@
   <script type="module">
   import Vue from './vue/vue.js';
 
-  const vm = new Vue({
+  window.vm = new Vue({
     el: '#app',
     data: {
       message: 'vuejs core principle'
     }
   });
-  vm.message = 'new vuejs value';
-  console.log(vm);
+
+  window.vm.message = 'new vuejs value';
+  console.log(window.vm);
   </script>
 </body>
 </html>
