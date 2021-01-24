@@ -1,0 +1,23 @@
+{
+  "name": "simple-vue",
+  "version": "1.0.0",
+  "description": "This project intends to elaborate the core mechanism of Vuejs.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npx http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tjcchen/simple-vue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tjcchen/simple-vue/issues"
+  },
+  "homepage": "https://github.com/tjcchen/simple-vue#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}

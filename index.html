@@ -11,8 +11,9 @@
     <input type="text" v-model="message" />
   </div>
 
-  <script type="text/javascript" src="../vue/vue.js"></script>
-  <script type="text/javascript">
+  <script type="module">
+  import Vue from './vue/vue.js';
+
   const vm = new Vue({
     el: '#app',
     data: {
