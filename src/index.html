@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Vue.js Implementation</title>
+</head>
+<body>
+  <div id="app">
+    <h3>{{ message }}</h3>
+    <input type="text" v-model="message" />
+  </div>
+
+  <script type="text/javascript" src="../vue/vue.js"></script>
+  <script type="text/javascript">
+  const vm = new Vue({
+    el: '#app',
+    data: {
+      message: 'vuejs core principle'
+    }
+  });
+  vm.message = 'new vuejs value';
+  console.log(vm);
+  </script>
+</body>
+</html>
