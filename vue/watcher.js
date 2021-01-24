@@ -1,5 +1,5 @@
 /**
- * 
+ * Watcher is used to watch vm.data changes
  */
 
 import Dependency from './dependency.js'

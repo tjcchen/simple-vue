@@ -5,6 +5,9 @@
 import Watcher from "./watcher.js";
 
 const utils = {
+  /**
+   * v-model
+   */
   model(node, expression, vm) {
     const initValue = this.getValue(expression, vm);
 
@@ -19,6 +22,10 @@ const utils = {
 
     this.modelUpdate(node, initValue);
   },
+
+  /**
+   * {{ message }}, v-text
+   */
   text(node, value, vm) {
     let result, regExp = /\{\{(.+)\}\}/g;
 
@@ -38,15 +45,31 @@ const utils = {
 
     this.textUpdate(node, result);
   },
+
+  /**
+   * Update v-text UI
+   */
   textUpdate(node, value) {
     node.textContent = value;
   },
+
+  /**
+   * Update v-model UI
+   */
   modelUpdate(node, value) {
     node.value = value;
   },
+
+  /**
+   * Get value with expression
+   */
   getValue(expression, vm) {
     return vm.$data[expression.trim()];
   },
+
+  /**
+   * Set value
+   */
   setValue(expression, vm, newValue) {
     vm.$data[expression] = newValue;
   }
