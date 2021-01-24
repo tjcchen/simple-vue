@@ -10,7 +10,6 @@ const utils = {
    */
   model(node, expression, vm) {
     const initValue = this.getValue(expression, vm);
-
     new Watcher(expression, vm, (newValue) => {
       this.modelUpdate(node, newValue);
     });
@@ -19,7 +18,6 @@ const utils = {
       const newValue = e.target.value;
       this.setValue(expression, vm, newValue);
     });
-
     this.modelUpdate(node, initValue);
   },
 
@@ -32,11 +30,9 @@ const utils = {
     if (value.includes('{{')) { // {{ message }}
       result = value.replace(regExp, (...args) => {
         const expression = args[1];
-  
         new Watcher(expression, vm, (newValue) => {
           this.textUpdate(node, newValue);
         });
-
         return this.getValue(expression, vm);
       });
     } else { // v-text="message"
@@ -44,6 +40,14 @@ const utils = {
     }
 
     this.textUpdate(node, result);
+  },
+
+  /**
+   * v-on:click="handler", @click="handler"
+   */
+  on(node, expression, vm, eventName) {
+    const fn = vm.$options.methods[expression];
+    node.addEventListener(eventName, fn.bind(vm), false);
   },
 
   /**

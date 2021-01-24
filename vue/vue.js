@@ -12,7 +12,7 @@ class Vue {
   constructor(options) {
     this.$el      = options.el;
     this.$data    = options.data;
-    this.$options = options.data;
+    this.$options = options;
 
     // Make data bind to vm.$data possess reactive feature
     new Observer(this.$data);

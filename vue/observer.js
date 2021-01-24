@@ -33,14 +33,14 @@ class Observer {
 
     Object.defineProperty(obj, key, {
       get: () => {
-        console.log('$data getter()', value);
+        // console.log('$data getter()', value);
         const watcher = Dependency.watcher;
         watcher && dependency.addWatcher(watcher);
 
         return value;
       },
       set: (newValue) => {
-        console.log('$data setter()', value, newValue);
+        // console.log('$data setter()', value, newValue);
         if (value === newValue) {
           return;
         }

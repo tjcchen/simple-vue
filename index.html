@@ -9,20 +9,28 @@
   <div id="app">
     <h3>{{ message }}</h3>
     <input type="text" v-model="message" />
+    <p>
+      <button v-on:click="clickHandler">clickHandler</button>
+      <button @click="clickHandler">@clickHandler</button>
+    </p>
   </div>
 
   <script type="module">
   import Vue from './vue/vue.js';
 
-  window.vm = new Vue({
+  const vm = new Vue({
     el: '#app',
     data: {
       message: 'vuejs core principle'
+    },
+    methods: {
+      clickHandler() {
+        this.message = new Date().getTime();
+      }
     }
   });
 
-  window.vm.message = 'new vuejs value';
-  console.log(window.vm);
+  vm.message = 'new vuejs principle'; // change data via ViewModel
   </script>
 </body>
 </html>

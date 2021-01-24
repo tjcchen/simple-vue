@@ -67,6 +67,9 @@ class Compiler {
         
         // [IMPORTANT]: handle different directives logic with utils
         utils[compileKey](node, value, this.vm, eventName);
+      } else if (this.isEventName(name)) { // @click="handler"
+        const [, eventName] = name.split('@');
+        utils['on'](node, value, this.vm, eventName);
       }
     });
   }
@@ -81,6 +84,13 @@ class Compiler {
     if (regExp.test(content)) {
       utils['text'](node, content, this.vm); // Allow utils v-text logic handle mustache( {{ xxx }} ) syntax too
     }
+  }
+
+  /**
+   * Check truthy of @ prefix event, like @click
+   */
+  isEventName(name) {
+    return name.startsWith('@');
   }
 
   /**
