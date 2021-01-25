@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Simple Vue Implementation
 This project elaborates on the core mechanism of Vue.js.
 
