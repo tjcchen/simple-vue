@@ -51,7 +51,7 @@ const utils = {
   },
 
   /**
-   * Update v-text UI
+   * Update v-text and {{ message }} UI
    */
   textUpdate(node, value) {
     node.textContent = value;

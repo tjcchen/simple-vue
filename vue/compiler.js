@@ -34,7 +34,7 @@ class Compiler {
   }
 
   compile(fragment) {
-    // Convert array-like element nodes to array, so that we can in Array forEach function
+    // Convert array-like element nodes to array, so that we can invoke Array forEach function
     const childNodes = Array.from(fragment.childNodes); 
 
     // Deal with v- attributes and mustache synxtax respectively
@@ -87,7 +87,7 @@ class Compiler {
   }
 
   /**
-   * Check truthy of @ prefix event, like @click
+   * Check truthy of `@` prefix event, like @click
    */
   isEventName(name) {
     return name.startsWith('@');

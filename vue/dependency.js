@@ -1,5 +1,5 @@
 /**
- * Dependency is responsible add watcher and notify wather update
+ * Dependency is responsible for adding watcher and notifying watcher update
  */
 
 class Dependency {
