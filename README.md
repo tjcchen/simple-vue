@@ -4,7 +4,7 @@
 This project elaborates on the core mechanism of Vue.js.
 
 ## Running The Example
-The whole project is bootstrapped with [http-server](https://github.com/http-party/http-server). Thus, we need to install relevant npm packages first, after that, we can run this application with npm script.
+The whole project is bootstrapped with [http-server](https://github.com/http-party/http-server). Thus, we need to install relevant npm packages first, after that, we are able to run this application with npm script.
 
 `Guide:`
 
