@@ -20,7 +20,7 @@ npm run serve
 ```
 
 ## Core Mechanism Explained
-`Object.defineProperty()` && `Observer Pattern`
+`Object.defineProperty()` & `Observer Pattern`
 
 ## Contact
 Email: tjcchen.engineer@gmail.com
